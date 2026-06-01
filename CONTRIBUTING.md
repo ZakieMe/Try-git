@@ -6,7 +6,7 @@ Every contribution — big or small — helps make this project better and helps
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
 - [How Can I Contribute?](#how-can-i-contribute)
@@ -26,21 +26,21 @@ By participating, you agree to uphold our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## How Can I Contribute?
 
-### 🐛 Reporting Bugs
+###  Reporting Bugs
 
 Before submitting a bug, please:
 1. Check the [existing issues](../../issues) to avoid duplicates
 2. Use the **Bug Report** issue template
 3. Include a clear description, steps to reproduce, and expected vs actual behavior
 
-### ✨ Suggesting Features
+###  Suggesting Features
 
 Feature requests are welcome! Please:
 1. Open a [Feature Request](../../issues/new?template=feature_request.md)
 2. Describe the feature and its value
 3. Keep the scope small and focused
 
-### 💻 Code Contributions
+###  Code Contributions
 
 We welcome:
 - Bug fixes
