@@ -4,7 +4,7 @@
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 AchievementForge/
@@ -30,7 +30,7 @@ AchievementForge/
 
 ---
 
-## 📝 50 Professional Commits (Conventional Commits)
+##  50 Professional Commits (Conventional Commits)
 
 Paste these one by one as you build the project, spread across time to look organic.
 
@@ -116,7 +116,7 @@ git commit -m "docs: add CHANGELOG.md with semantic versioning history"
 
 ---
 
-## 🔀 30 Pull Request Titles
+##  30 Pull Request Titles
 
 ### Feature PRs
 ```
@@ -456,7 +456,7 @@ Marks Answers       Answers Discussions
 
 ---
 
-## 🚀 Deployment Guide
+##  Deployment Guide
 
 ### Option 1 — GitHub Pages (Free, Recommended)
 
