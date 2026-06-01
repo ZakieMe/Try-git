@@ -1,4 +1,4 @@
-# ⚒️ AchievementForge
+#  AchievementForge
 
 <div align="center">
 
@@ -13,13 +13,13 @@
 
 **A professional GitHub Achievement Tracker & Dashboard — built for developers who take their open source presence seriously.**
 
-[🔥 Live Demo](https://yourusername.github.io/AchievementForge) · [📖 Docs](#-documentation) · [🐛 Report Bug](../../issues/new?template=bug_report.md) · [✨ Request Feature](../../issues/new?template=feature_request.md)
+[ Live Demo](https://yourusername.github.io/AchievementForge) · [ Docs](#-documentation) · [ Report Bug](../../issues/new?template=bug_report.md) · [ Request Feature](../../issues/new?template=feature_request.md)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [About](#-about)
 - [Features](#-features)
@@ -34,7 +34,7 @@
 
 ---
 
-## 🔥 About
+##  About
 
 **AchievementForge** is a professional, open-source dashboard for tracking and earning GitHub achievements. Built with pure HTML5, CSS3, and Vanilla JavaScript — no frameworks, no dependencies, just clean and fast web development.
 
@@ -46,22 +46,22 @@ This repository serves a dual purpose:
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🏆 **Achievement Showcase** — All 11 GitHub achievements with detailed strategies
-- 📊 **Progress Tracking** — Visual progress bars for tiered achievements  
-- 🌙 **Dark / Light Mode** — Smooth theme transitions with localStorage persistence
-- ✨ **Particle Animation** — Canvas-based forge-spark hero animation
-- 📱 **Fully Responsive** — Works flawlessly on mobile, tablet, and desktop
-- ⚡ **Zero Dependencies** — Pure HTML, CSS, JavaScript — no build step required
-- 🎨 **Professional UI** — Dashboard-style design with animated cards
-- 🔍 **Achievement Filters** — Filter by status: earned, in progress, available, legacy
-- 📅 **Timeline Section** — Visual development history
-- 🗺️ **Roadmap Section** — 5-phase project roadmap
+-  **Achievement Showcase** — All 11 GitHub achievements with detailed strategies
+-  **Progress Tracking** — Visual progress bars for tiered achievements  
+-  **Dark / Light Mode** — Smooth theme transitions with localStorage persistence
+-  **Particle Animation** — Canvas-based forge-spark hero animation
+-  **Fully Responsive** — Works flawlessly on mobile, tablet, and desktop
+-  **Zero Dependencies** — Pure HTML, CSS, JavaScript — no build step required
+-  **Professional UI** — Dashboard-style design with animated cards
+-  **Achievement Filters** — Filter by status: earned, in progress, available, legacy
+-  **Timeline Section** — Visual development history
+-  **Roadmap Section** — 5-phase project roadmap
 
 ---
 
-## 🏆 Achievements Tracked
+##  Achievements Tracked
 
 | Achievement | Tiers | Status | Strategy |
 |-------------|-------|--------|----------|
@@ -79,32 +79,32 @@ This repository serves a dual purpose:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 AchievementForge/
-├── 📄 index.html              # Main website (self-contained)
-├── 📁 assets/
-│   ├── 📁 css/
+├──  index.html              # Main website (self-contained)
+├──  assets/
+│   ├──  css/
 │   │   └── style.css          # Standalone stylesheet
-│   └── 📁 js/
+│   └──  js/
 │       └── script.js          # Standalone JavaScript
-├── 📁 .github/
-│   ├── 📁 ISSUE_TEMPLATE/
+├──  .github/
+│   ├──  ISSUE_TEMPLATE/
 │   │   ├── bug_report.md      # Bug report template
 │   │   └── feature_request.md # Feature request template
 │   └── PULL_REQUEST_TEMPLATE.md
-├── 📄 README.md               # This file
-├── 📄 CONTRIBUTING.md         # Contribution guidelines
-├── 📄 CODE_OF_CONDUCT.md      # Community standards
-├── 📄 CHANGELOG.md            # Version history
-├── 📄 SECURITY.md             # Security policy
-└── 📄 LICENSE                 # MIT License
+├──  README.md               # This file
+├──  CONTRIBUTING.md         # Contribution guidelines
+├──  CODE_OF_CONDUCT.md      # Community standards
+├──  CHANGELOG.md            # Version history
+├──  SECURITY.md             # Security policy
+└──  LICENSE                 # MIT License
 ```
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -134,7 +134,7 @@ That's it! No installation, no build step, no configuration needed.
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
 ### GitHub Pages (Recommended)
 
@@ -154,7 +154,7 @@ That's it! No installation, no build step, no configuration needed.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are what make the open source community such an amazing place! We welcome all contributions, big or small.
 
@@ -181,7 +181,7 @@ git push origin feat/your-amazing-feature
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-### 🎯 Ways to Contribute (and Earn Achievements!)
+###  Ways to Contribute (and Earn Achievements!)
 
 | Contribution | Achievement Earned |
 |---|---|
@@ -195,7 +195,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 | Phase | Title | Status |
 |-------|-------|--------|
@@ -207,7 +207,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
-## 📝 Commit Convention
+##  Commit Convention
 
 This project follows [Conventional Commits](https://www.conventionalcommits.org/).
 
@@ -233,7 +233,7 @@ git commit -m "style: improve card hover glow effect on dark mode"
 
 ---
 
-## 📄 License
+##  License
 
 Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.
 
