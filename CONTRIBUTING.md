@@ -1,6 +1,6 @@
 # Contributing to AchievementForge
 
-Thank you for your interest in contributing to **AchievementForge**! 🎉
+Thank you for your interest in contributing to **AchievementForge**! 
 
 Every contribution — big or small — helps make this project better and helps contributors earn real GitHub achievements. This document outlines our guidelines and workflows.
 
