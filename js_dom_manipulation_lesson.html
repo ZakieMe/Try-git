@@ -1,13 +1,62 @@
-<h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);margin:-1px">Pelajaran interaktif DOM Manipulation JavaScript — modul 1 dari 7 meliputi konsep, contoh kode, analogi, latihan, dan mini project</h2>
-
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Pelajaran interaktif DOM Manipulation JavaScript — konsep, contoh kode, analogi, latihan, dan mini project Task Manager." />
+<title>Pelajaran DOM Manipulation | AchievementForge</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=JetBrains+Mono:wght@400;500;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --color-background-primary: #0d1117;
+    --color-background-secondary: #161b22;
+    --color-background-info: rgba(88,166,255,.1);
+    --color-background-success: #3fb950;
+    --color-border-tertiary: #21262d;
+    --color-border-secondary: #30363d;
+    --color-text-primary: #f0f6fc;
+    --color-text-secondary: #8b949e;
+    --color-text-tertiary: #6e7681;
+    --color-text-info: #58a6ff;
+    --color-text-success: #3fb950;
+    --border-radius-md: 8px;
+    --border-radius-lg: 14px;
+    --font-sans: 'Nunito Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.6;
+  }
+  h1 { font-family: 'Rajdhani', sans-serif; }
+  a.back-link {
+    display: inline-flex; align-items: center; gap: .4rem;
+    color: var(--color-text-secondary); text-decoration: none; font-size: .85rem;
+    font-family: var(--font-mono); margin-bottom: 1.5rem;
+  }
+  a.back-link:hover { color: var(--color-text-primary); }
+</style>
 <style>
 .tb{padding:6px 14px;font-size:13px;border:.5px solid var(--color-border-tertiary);background:transparent;border-radius:var(--border-radius-md);cursor:pointer;color:var(--color-text-secondary);font-family:var(--font-sans);transition:background .15s}
 .tb.on{background:var(--color-background-secondary);color:var(--color-text-primary);font-weight:500;border-color:var(--color-border-secondary)}
 .cb{background:var(--color-background-secondary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:12px 14px;font-family:var(--font-mono);font-size:12.5px;line-height:1.75;overflow-x:auto;white-space:pre;margin:10px 0}
-.kw{color:#7C3AED}.fn{color:#0284C7}.str{color:#16A34A}.cm{color:var(--color-text-tertiary)}.hl{color:#DC2626}
+.kw{color:#a78bfa}.fn{color:#58a6ff}.str{color:#3fb950}.cm{color:var(--color-text-tertiary)}.hl{color:#f87171}
 .cd{background:var(--color-background-secondary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin:10px 0}
 .tg{display:inline-block;font-size:11px;padding:2px 9px;border-radius:999px;font-weight:500}
 </style>
+</head>
+<body>
+
+<a class="back-link" href="indeks.html">← Kembali ke AchievementForge</a>
+
+<h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);margin:-1px">Pelajaran interaktif DOM Manipulation JavaScript — modul 1 dari 7 meliputi konsep, contoh kode, analogi, latihan, dan mini project</h2>
 
 <div style="padding:.5rem 0">
   <span class="tg" style="background:var(--color-background-info);color:var(--color-text-info)">Modul 1 / 7</span>
@@ -30,7 +79,7 @@
   <div style="display:grid;gap:6px">
     <div style="padding:10px 14px;border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);font-size:14px;display:flex;align-items:center;gap:10px"><i class="ti ti-search" style="font-size:16px;color:var(--color-text-info);flex-shrink:0" aria-hidden="true"></i><span><strong style="font-weight:500">Pilih elemen</strong> — temukan tag HTML yang ingin diubah</span></div>
     <div style="padding:10px 14px;border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);font-size:14px;display:flex;align-items:center;gap:10px"><i class="ti ti-edit" style="font-size:16px;color:var(--color-text-success);flex-shrink:0" aria-hidden="true"></i><span><strong style="font-weight:500">Ubah konten/style</strong> — ganti teks, warna, atau class CSS</span></div>
-    <div style="padding:10px 14px;border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);font-size:14px;display:flex;align-items:center;gap:10px"><i class="ti ti-layout-grid" style="font-size:16px;color:var(--color-text-warning);flex-shrink:0" aria-hidden="true"></i><span><strong style="font-weight:500">Buat/hapus elemen</strong> — tambah atau buang elemen dari halaman</span></div>
+    <div style="padding:10px 14px;border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);font-size:14px;display:flex;align-items:center;gap:10px"><i class="ti ti-layout-grid" style="font-size:16px;color:var(--color-text-warning, #f59e0b);flex-shrink:0" aria-hidden="true"></i><span><strong style="font-weight:500">Buat/hapus elemen</strong> — tambah atau buang elemen dari halaman</span></div>
   </div>
 </div>
 <h3 style="font-size:16px;font-weight:500;margin:1.25rem 0 .5rem">Cara memilih elemen</h3>
@@ -61,7 +110,7 @@ judul.classList.<span class="fn">remove</span>(<span class="str">'aktif'</span>)
 judul.classList.<span class="fn">toggle</span>(<span class="str">'gelap'</span>); <span class="cm">// add jika tidak ada, remove jika ada</span></div>
 </div>
 
-<div class="sec" id="s1">
+<div class="sec" id="s1" style="display:none">
 <p style="font-size:14px;color:var(--color-text-secondary);margin:0 0 16px;line-height:1.6">Dua contoh ini mewakili 80% pola DOM yang akan kamu temui di proyek nyata.</p>
 <h3 style="font-size:16px;font-weight:500;margin:0 0 .5rem">Dark mode toggle</h3>
 <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 6px">Klik tombol → toggle class di body → CSS menangani visualnya.</p>
@@ -90,67 +139,30 @@ document.<span class="fn">querySelector</span>(<span class="str">'#add'</span>).
   document.<span class="fn">querySelector</span>(<span class="str">'#list'</span>).<span class="fn">appendChild</span>(li); <span class="cm">// masuk ke DOM</span>
   input.<span class="hl">value</span> = <span class="str">''</span>;                               <span class="cm">// reset input</span>
 });</div>
-<div class="cd" style="background:var(--color-background-info);margin-top:16px">
-  <p style="font-size:13px;font-weight:500;margin:0 0 6px;color:var(--color-text-info)">Tips penting:</p>
-  <ul style="margin:0;padding-left:1.2rem;font-size:13px;line-height:1.9;color:var(--color-text-secondary)">
-    <li>Pakai <code style="font-family:var(--font-mono)">textContent</code>, bukan <code style="font-family:var(--font-mono)">innerHTML</code>, untuk teks biasa — lebih aman dari XSS</li>
-    <li>Pakai <code style="font-family:var(--font-mono)">classList.toggle</code> daripada ubah style langsung — lebih mudah dimaintain</li>
-    <li><code style="font-family:var(--font-mono)">querySelector</code> lebih fleksibel dari <code style="font-family:var(--font-mono)">getElementById</code></li>
-  </ul>
+</div>
+
+<div class="sec" id="s2" style="display:none">
+<p style="font-size:14px;line-height:1.7;margin:0 0 14px">Bayangkan HTML sebagai denah rumah, dan DOM adalah versi digital denah itu yang bisa kamu ubah sambil rumahnya sudah dihuni. <code>querySelector</code> seperti menunjuk ruangan tertentu; <code>classList.toggle</code> seperti menyalakan/mematikan lampu ruangan itu; <code>appendChild</code> seperti menambah kursi baru ke ruang tamu tanpa membangun ulang rumahnya.</p>
+<div class="cd">
+  <p style="font-size:13px;color:var(--color-text-secondary);margin:0">Kuncinya: DOM adalah representasi <em>hidup</em>. Begitu kamu mengubahnya lewat JavaScript, browser langsung menggambar ulang tampilan — tanpa reload halaman.</p>
 </div>
 </div>
 
-<div class="sec" id="s2">
-<div class="cd" style="background:var(--color-background-secondary);margin-bottom:12px">
-  <p style="font-size:14px;line-height:1.7;margin:0;color:var(--color-text-secondary)">Bayangkan sebuah hotel besar dengan ratusan kamar, lorong, dan fasilitas. Itulah cara kamu harus membayangkan DOM.</p>
-</div>
-<div style="display:grid;gap:10px">
-  <div class="cd"><div style="display:flex;align-items:start;gap:12px"><i class="ti ti-building" style="font-size:20px;color:var(--color-text-info);margin-top:2px;flex-shrink:0" aria-hidden="true"></i><div><p style="font-size:14px;font-weight:500;margin:0 0 4px">HTML = Bangunan hotel</p><p style="font-size:13px;color:var(--color-text-secondary);margin:0;line-height:1.6">Struktur fisik yang sudah dibangun — kamar, lift, lobby. Semua tag HTML kamu (<code style="font-family:var(--font-mono);font-size:12px">&lt;div&gt;</code>, <code style="font-family:var(--font-mono);font-size:12px">&lt;p&gt;</code>, <code style="font-family:var(--font-mono);font-size:12px">&lt;button&gt;</code>) adalah ruangan-ruangan itu.</p></div></div></div>
-  <div class="cd"><div style="display:flex;align-items:start;gap:12px"><i class="ti ti-map" style="font-size:20px;color:var(--color-text-success);margin-top:2px;flex-shrink:0" aria-hidden="true"></i><div><p style="font-size:14px;font-weight:500;margin:0 0 4px">DOM = Denah hotel</p><p style="font-size:13px;color:var(--color-text-secondary);margin:0;line-height:1.6">Peta lengkap semua kamar, posisinya, dan hubungan antar ruangan. Browser membuat denah ini secara otomatis setiap kali HTML dibaca.</p></div></div></div>
-  <div class="cd"><div style="display:flex;align-items:start;gap:12px"><i class="ti ti-user-check" style="font-size:20px;color:var(--color-text-warning);margin-top:2px;flex-shrink:0" aria-hidden="true"></i><div><p style="font-size:14px;font-weight:500;margin:0 0 4px">JavaScript = Manajer hotel</p><p style="font-size:13px;color:var(--color-text-secondary);margin:0;line-height:1.6">Manajer bisa lihat denah, masuk ke kamar mana saja, ganti furniture (<code style="font-family:var(--font-mono);font-size:12px">textContent</code>), cat ulang dinding (<code style="font-family:var(--font-mono);font-size:12px">style</code>), atau bangun kamar baru (<code style="font-family:var(--font-mono);font-size:12px">createElement</code>).</p></div></div></div>
-  <div class="cd"><div style="display:flex;align-items:start;gap:12px"><i class="ti ti-key" style="font-size:20px;color:var(--color-text-danger);margin-top:2px;flex-shrink:0" aria-hidden="true"></i><div><p style="font-size:14px;font-weight:500;margin:0 0 4px">Selector = Kunci kamar</p><p style="font-size:13px;color:var(--color-text-secondary);margin:0;line-height:1.6"><code style="font-family:var(--font-mono);font-size:12px">#id</code> = kunci master untuk 1 kamar spesifik. <code style="font-family:var(--font-mono);font-size:12px">.class</code> = kunci yang buka semua kamar bertipe sama sekaligus.</p></div></div></div>
-</div>
+<div class="sec" id="s3" style="display:none">
+<p style="font-size:14px;line-height:1.7;margin:0 0 14px">Coba kerjakan sendiri sebelum lihat mini project di tab berikutnya:</p>
+<ol style="font-size:14px;line-height:1.9;padding-left:1.25rem">
+  <li>Buat tombol yang saat diklik mengubah warna latar body secara acak.</li>
+  <li>Buat input teks + tombol "Tambah" yang menambahkan item baru ke daftar `&lt;ul&gt;`.</li>
+  <li>Buat setiap item di daftar bisa dihapus saat diklik dua kali.</li>
+</ol>
 </div>
 
-<div class="sec" id="s3">
-<p style="font-size:14px;color:var(--color-text-secondary);margin:0 0 1.25rem;line-height:1.6">Kerjakan di console browser (F12 → Console), CodePen, atau JSFiddle. Fokus prosesnya, bukan hasilnya.</p>
-<div style="display:grid;gap:12px">
-  <div style="border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden">
-    <div style="padding:10px 16px;border-bottom:.5px solid var(--color-border-tertiary);display:flex;align-items:center;gap:8px"><span class="tg" style="background:var(--color-background-success);color:var(--color-text-success)">Mudah</span><p style="font-size:14px;font-weight:500;margin:0">Ganti teks heading</p></div>
-    <div style="padding:14px 16px"><p style="font-size:14px;line-height:1.7;margin:0 0 10px">Buat HTML dengan <code style="font-family:var(--font-mono)">&lt;h1 id="judul"&gt;Selamat datang&lt;/h1&gt;</code>. Tulis JS yang mengubah teksnya menjadi nama kamu.</p>
-    <div class="cb" style="margin:0"><span class="cm">// Isi bagian ???</span>
-<span class="kw">const</span> el = document.<span class="fn">getElementById</span>(<span class="str">'???'</span>);
-el.<span class="hl">textContent</span> = <span class="str">'???'</span>;</div></div>
-  </div>
-  <div style="border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden">
-    <div style="padding:10px 16px;border-bottom:.5px solid var(--color-border-tertiary);display:flex;align-items:center;gap:8px"><span class="tg" style="background:var(--color-background-warning);color:var(--color-text-warning)">Sedang</span><p style="font-size:14px;font-weight:500;margin:0">Ubah warna saat klik</p></div>
-    <div style="padding:14px 16px"><p style="font-size:14px;line-height:1.7;margin:0 0 10px">Buat <code style="font-family:var(--font-mono)">&lt;div id="kotak"&gt;</code> ukuran 100×100px. Tiap klik tombol, ubah background ke warna berikutnya dari array warna.</p>
-    <div class="cb" style="margin:0"><span class="kw">const</span> warna = [<span class="str">'tomato'</span>, <span class="str">'steelblue'</span>, <span class="str">'seagreen'</span>, <span class="str">'gold'</span>];
-<span class="kw">let</span> i = 0;
-btn.<span class="fn">addEventListener</span>(<span class="str">'click'</span>, () =&gt; {
-  kotak.style.<span class="hl">background</span> = warna[i];
-  i = (i + <span class="hl">???</span>) % warna.length; <span class="cm">// rotasi — isi ???</span>
-});</div></div>
-  </div>
-  <div style="border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden">
-    <div style="padding:10px 16px;border-bottom:.5px solid var(--color-border-tertiary);display:flex;align-items:center;gap:8px"><span class="tg" style="background:var(--color-background-danger);color:var(--color-text-danger)">Menantang</span><p style="font-size:14px;font-weight:500;margin:0">Daftar dengan tombol hapus</p></div>
-    <div style="padding:14px 16px"><p style="font-size:14px;line-height:1.7;margin:0 0 10px">Buat input + tombol "Tambah". Setiap item yang ditambahkan punya tombol "Hapus" yang menghapus item tersebut dari DOM.</p>
-    <div class="cb" style="margin:0"><span class="kw">const</span> li = document.<span class="fn">createElement</span>(<span class="str">'li'</span>);
-li.<span class="hl">textContent</span> = teks;
-<span class="kw">const</span> hapus = document.<span class="fn">createElement</span>(<span class="str">'button'</span>);
-hapus.<span class="fn">addEventListener</span>(<span class="str">'click'</span>, () =&gt; li.<span class="fn">???</span>()); <span class="cm">// hint: metode hapus elemen dari DOM</span>
-li.<span class="fn">appendChild</span>(hapus);</div></div>
-  </div>
-</div>
-<button onclick="sendPrompt('Saya sedang belajar DOM Manipulation JavaScript. Saya mau tanya atau minta review kode dari latihan yang saya kerjakan. Boleh bantu?')" style="margin-top:1rem;font-size:13px;padding:8px 16px;border:.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:transparent;cursor:pointer;font-family:var(--font-sans);color:var(--color-text-primary)">Minta bantuan atau review kode ↗</button>
-</div>
-
-<div class="sec" id="s4">
-<p style="font-size:14px;color:var(--color-text-secondary);margin:0 0 1.25rem;line-height:1.6">Coba langsung! Tambah tugas, klik teks untuk tandai selesai, klik × untuk hapus.</p>
-<div style="border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden">
-  <div style="padding:14px 16px;background:var(--color-background-secondary);border-bottom:.5px solid var(--color-border-tertiary)">
+<div class="sec" id="s4" style="display:none">
+<h3 style="font-size:16px;font-weight:500;margin:0 0 .75rem">Mini Project: Task Manager</h3>
+<div style="border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:1rem">
+  <div style="padding:10px 14px;border-bottom:.5px solid var(--color-border-tertiary);background:var(--color-background-secondary)">
     <div style="display:flex;gap:8px">
-      <input id="task-inp" type="text" placeholder="Tulis tugas baru..." style="flex:1;font-family:var(--font-sans)" onkeydown="if(event.key==='Enter')addTask()">
+      <input id="task-inp" type="text" placeholder="Tulis tugas baru..." style="flex:1;font-family:var(--font-sans);background:var(--color-background-primary);color:var(--color-text-primary);border:.5px solid var(--color-border-secondary);border-radius:6px;padding:8px" onkeydown="if(event.key==='Enter')addTask()">
       <button onclick="addTask()" style="padding:0 14px;border:.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:transparent;cursor:pointer;font-size:13px;white-space:nowrap;color:var(--color-text-primary);font-family:var(--font-sans)">Tambah</button>
     </div>
   </div>
@@ -178,7 +190,7 @@ item.<span class="fn">addEventListener</span>(<span class="str">'click'</span>, 
 
 <span class="cm">// 5. remove() — hapus elemen dari DOM sepenuhnya</span>
 delBtn.<span class="fn">addEventListener</span>(<span class="str">'click'</span>, () =&gt; item.<span class="fn">remove</span>());</div>
-<button onclick="sendPrompt('Saya sudah selesai belajar DOM Manipulation dan mencoba mini project Task Manager. Sekarang saya mau lanjut ke materi Event Handling. Tolong ajarkan saya seperti tadi!')" style="margin-top:1rem;font-size:13px;padding:8px 16px;border:.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:transparent;cursor:pointer;font-family:var(--font-sans);color:var(--color-text-primary)">Lanjut ke Event Handling ↗</button>
+<a href="indeks.html" style="display:inline-block;margin-top:1rem;font-size:13px;padding:8px 16px;border:.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:transparent;cursor:pointer;font-family:var(--font-sans);color:var(--color-text-primary);text-decoration:none">← Kembali ke Dashboard AchievementForge</a>
 </div>
 
 <script>
@@ -188,7 +200,6 @@ function go(idx,btn){
   document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
 }
-document.querySelectorAll('.sec').forEach((s,i)=>{if(i>0)s.style.display='none'});
 
 function addTask(){
   const inp=document.getElementById('task-inp');
@@ -240,3 +251,5 @@ function updateCount(){
   document.getElementById('done-count').textContent=done+' selesai';
 }
 </script>
+</body>
+</html>

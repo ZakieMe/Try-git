@@ -1,51 +1,18 @@
-# Security Policy
+# Kebijakan Keamanan
 
-## Supported Versions
+## Melaporkan Kerentanan
 
-| Version | Supported |
-|---------|-----------|
-| 1.2.x   | ✅ Yes |
-| 1.1.x   | ✅ Yes |
-| 1.0.x   | ⚠️ Critical fixes only |
-| < 1.0   | ❌ No |
+Jika kamu menemukan kerentanan keamanan di proyek ini (misalnya XSS lewat input pada fitur GitHub Live Lookup, atau eksposur data sensitif), silakan laporkan melalui:
 
-## Reporting a Vulnerability
+- Buka [issue baru](../../issues/new) dengan label `security`, **tanpa** menyertakan detail eksploitasi secara publik jika kerentanannya kritis.
+- Atau hubungi maintainer langsung lewat profil GitHub [@Jouqio](https://github.com/Jouqio).
 
-If you discover a security vulnerability in AchievementForge, please report it **privately** — do not open a public issue.
+## Cakupan
 
-### How to Report
+Proyek ini adalah situs statis (HTML/CSS/JS) tanpa backend sendiri. Satu-satunya komunikasi jaringan yang dilakukan adalah permintaan `fetch()` langsung dari browser pengguna ke `api.github.com` (data publik, tanpa autentikasi, tanpa menyimpan data pengguna di server mana pun).
 
-**Option 1 — GitHub Private Vulnerability Reporting (Preferred)**
-Use GitHub's [private vulnerability reporting](../../security/advisories/new) feature.
+## Praktik yang Diterapkan
 
-**Option 2 — Email**
-Send details to: `security@yourdomain.com`
-
-Include:
-- Type of issue (e.g. XSS, data exposure, dependency vulnerability)
-- File paths related to the issue
-- Steps to reproduce
-- Proof of concept (if possible)
-- Potential impact
-
-### Response Timeline
-
-| Stage | Timeline |
-|-------|----------|
-| Acknowledgement | Within 48 hours |
-| Initial assessment | Within 7 days |
-| Fix or mitigation | Within 30 days |
-| Public disclosure | After fix is released |
-
-We appreciate responsible disclosure and will credit reporters in the changelog (if desired).
-
-## Security Considerations
-
-AchievementForge is a **static website** with no backend, no database, and no user data collection. It uses:
-
-- No server-side processing
-- No authentication or sessions
-- No external API calls (planned features will use GitHub's public API only)
-- `localStorage` only for theme preference (no personal data)
-
-The attack surface is minimal by design.
+- Semua input pengguna (username GitHub di fitur Live Lookup) di-escape otomatis lewat `textContent`/atribut DOM standar, bukan `innerHTML` langsung dari input pengguna.
+- Tidak ada API key atau kredensial yang disimpan di kode sisi klien.
+- Tautan eksternal menggunakan `rel="noopener noreferrer"`.
