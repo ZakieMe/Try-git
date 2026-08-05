@@ -88,11 +88,7 @@ python3 -m http.server 8080
 
 ---
 
-<<<<<<< HEAD
-## 🤝 Cara Berkontribusi (PR)
-=======
 ##  Cara Berkontribusi (PR)
->>>>>>> 5a5559fc65a731b70d6a1f9eda8eb3eba2efd9ff
 
 ```bash
 # 1. Fork repo ini, lalu clone hasil fork kamu
@@ -139,7 +135,7 @@ Workflow otomatis di `.github/workflows/deploy.yml` sudah disediakan untuk deplo
 
 ---
 
-##  Lisensi
+##  Licensi
 
 Didistribusikan di bawah **Lisensi MIT**. Lihat [LISENSI](LISENSI) untuk detail.
 
