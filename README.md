@@ -1,254 +1,150 @@
-# ⚒️ AchievementForge
+#  AchievementForge
 
 <div align="center">
 
 ![AchievementForge Banner](https://img.shields.io/badge/AchievementForge-GitHub%20Achievement%20Tracker-f59e0b?style=for-the-badge&logo=github&logoColor=white)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/AchievementForge?style=flat-square&color=f59e0b)](../../stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/yourusername/AchievementForge?style=flat-square&color=3fb950)](../../network/members)
-[![Contributors](https://img.shields.io/github/contributors/yourusername/AchievementForge?style=flat-square&color=bc8cff)](../../graphs/contributors)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LISENSI)
+[![GitHub Stars](https://img.shields.io/github/stars/Jouqio/Try-git?style=flat-square&color=f59e0b)](../../stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Jouqio/Try-git?style=flat-square&color=3fb950)](../../network/members)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 
-**A professional GitHub Achievement Tracker & Dashboard — built for developers who take their open source presence seriously.**
+**Dashboard pelacak achievement GitHub dibangun dengan HTML, CSS, dan JavaScript murni, lengkap dengan pencarian statistik profil GitHub secara live.**
 
-[🔥 Live Demo](https://yourusername.github.io/AchievementForge) · [📖 Docs](#-documentation) · [🐛 Report Bug](../../issues/new?template=bug_report.md) · [✨ Request Feature](../../issues/new?template=feature_request.md)
+[ Live Demo](https://jouqio.github.io/Try-git/indeks.html) · [ Belajar DOM](Pelajaran_manipulasi_dom_js.html) · [ Lapor Bug](../../issues/new)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+##  Daftar Isi
 
-- [About](#-about)
-- [Features](#-features)
-- [Achievements Tracked](#-achievements-tracked)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
+- [Tentang](#-tentang)
+- [Fitur](#-fitur)
+- [Struktur Proyek](#-struktur-proyek)
+- [Cara Menjalankan](#-cara-menjalankan)
+- [Cara Berkontribusi (PR)](#-cara-berkontribusi-pr)
 - [Deployment](#-deployment)
-- [Contributing](#-contributing)
 - [Roadmap](#-roadmap)
-- [Commit Convention](#-commit-convention)
-- [License](#-license)
+- [Lisensi](#-lisensi)
 
 ---
 
-## 🔥 About
+##  Tentang
 
-**AchievementForge** is a professional, open-source dashboard for tracking and earning GitHub achievements. Built with pure HTML5, CSS3, and Vanilla JavaScript — no frameworks, no dependencies, just clean and fast web development.
+**AchievementForge** adalah dashboard open source untuk melacak achievement GitHub, dibangun dengan HTML5, CSS3, dan Vanilla JavaScript — tanpa framework, tanpa dependency, tanpa build step.
 
-This repository serves a dual purpose:
-1. **A real, polished open source project** that showcases professional web development.
-2. **An active repository** designed to help contributors earn GitHub achievements through genuine collaboration.
-
-> "Every commit forges your developer legacy."
+Repo ini juga menjadi tempat latihan workflow Git & GitHub yang sesungguhnya: fork, branch, commit, dan pull request nyata dengan perubahan kode yang genuinely berguna.
 
 ---
 
-## ✨ Features
+##  Fitur
 
-- 🏆 **Achievement Showcase** — All 11 GitHub achievements with detailed strategies
-- 📊 **Progress Tracking** — Visual progress bars for tiered achievements  
-- 🌙 **Dark / Light Mode** — Smooth theme transitions with localStorage persistence
-- ✨ **Particle Animation** — Canvas-based forge-spark hero animation
-- 📱 **Fully Responsive** — Works flawlessly on mobile, tablet, and desktop
-- ⚡ **Zero Dependencies** — Pure HTML, CSS, JavaScript — no build step required
-- 🎨 **Professional UI** — Dashboard-style design with animated cards
-- 🔍 **Achievement Filters** — Filter by status: earned, in progress, available, legacy
-- 📅 **Timeline Section** — Visual development history
-- 🗺️ **Roadmap Section** — 5-phase project roadmap
-
----
-
-## 🏆 Achievements Tracked
-
-| Achievement | Tiers | Status | Strategy |
-|-------------|-------|--------|----------|
-| 🦈 Pull Shark | 🥉🥈🥇 | Active | Merge PRs into this repo |
-| 🤠 YOLO | — | Active | Merge a PR without review |
-| ⚡ Quickdraw | — | Active | Close issue/PR within 5 minutes |
-| 🧑‍💻 Pair Extraordinaire | 🥉🥈🥇 | Active | Co-author commits on merged PRs |
-| 🌌 Galaxy Brain | 🥉🥈🥇 | Active | Answer a Discussion (marked as answer) |
-| ⭐ Starstruck | 🥉🥈🥇 | Active | Get stars on your repository |
-| 💝 Heart On Your Sleeve | — | Active | React with ❤️ to any content |
-| 🧙 Open Sourcerer | 🥉🥈🥇 | Active | Merge PRs in multiple public repos |
-| 💖 Public Sponsor | — | Active | Sponsor a GitHub developer |
-| 🌐 Arctic Code Vault | — | **Legacy** | No longer earnable |
-| 🚁 Mars 2020 Helicopter | — | **Legacy** | No longer earnable |
+-  **Achievement Showcase** — 11 achievement GitHub dengan strategi resmi untuk meraihnya
+-  **GitHub Live Lookup** — cari username GitHub apa pun dan tarik data publik langsung dari GitHub REST API (repo, followers, following, total star)
+-  **Dark / Light Mode** — transisi tema halus dengan persistensi `localStorage`
+-  **Animasi Partikel Canvas** — animasi hero interaktif
+-  **Fully Responsive** — mobile, tablet, dan desktop
+-  **Zero Dependencies** — tidak butuh build tool
+-  **Filter Achievement** — earned / in progress / available / legacy
+-  **Timeline & Roadmap** — riwayat dan rencana pengembangan
+-  **Modul Belajar DOM** — halaman interaktif belajar DOM manipulation, terintegrasi ke navigasi utama
 
 ---
 
-## 📁 Project Structure
+##  Struktur Proyek
 
 ```
-AchievementForge/
-├── 📄 index.html              # Main website (self-contained)
-├── 📁 assets/
-│   ├── 📁 css/
-│   │   └── style.css          # Standalone stylesheet
-│   └── 📁 js/
-│       └── script.js          # Standalone JavaScript
-├── 📁 .github/
-│   ├── 📁 ISSUE_TEMPLATE/
-│   │   ├── bug_report.md      # Bug report template
-│   │   └── feature_request.md # Feature request template
-│   └── PULL_REQUEST_TEMPLATE.md
-├── 📄 README.md               # This file
-├── 📄 CONTRIBUTING.md         # Contribution guidelines
-├── 📄 CODE_OF_CONDUCT.md      # Community standards
-├── 📄 CHANGELOG.md            # Version history
-├── 📄 SECURITY.md             # Security policy
-└── 📄 LICENSE                 # MIT License
+Try-git/
+├── indeks.html                         # Dashboard utama (self-contained)
+├── Pelajaran_manipulasi_dom_js.html    # Modul belajar DOM manipulation
+├── README.md                           # File ini
+├── CONTRIBUTING.md                     # Panduan kontribusi
+├── CHANGELOG.md                        # Riwayat versi
+├── KEAMANAN.md                         # Kebijakan keamanan
+├── LISENSI                             # Lisensi MIT
+├── PLAN.md                             # Catatan rencana pengembangan
+└── .github/
+    ├── workflows/deploy.yml            # Auto-deploy ke GitHub Pages
+    ├── ISSUE_TEMPLATE/
+    │   └── bug_report.md
+    └── PULL_REQUEST_TEMPLATE.md
 ```
 
 ---
 
-## 🚀 Getting Started
+##  Cara Menjalankan
 
-### Prerequisites
-
-Just a modern web browser. No Node.js, no npm, no build tools required.
-
-### Installation
+Cukup browser modern — tidak perlu Node.js, npm, atau build tool.
 
 ```bash
-# 1. Fork the repository
-# Click "Fork" in the top-right corner of this page
-
-# 2. Clone your fork
-git clone https://github.com/YOUR_USERNAME/AchievementForge.git
-
-# 3. Navigate to the project
-cd AchievementForge
-
-# 4. Open in your browser
-open index.html
-# or use a local dev server:
-npx serve .
-# or with Python:
+git clone https://github.com/Jouqio/Try-git.git
+cd Try-git
+open indeks.html
+# atau jalankan local server:
 python3 -m http.server 8080
 ```
 
-That's it! No installation, no build step, no configuration needed.
-
 ---
 
-## 🌐 Deployment
-
-### GitHub Pages (Recommended)
-
-1. Fork this repository
-2. Go to **Settings → Pages**
-3. Set source to **Branch: main / (root)**
-4. Click **Save**
-5. Your site will be live at `https://yourusername.github.io/AchievementForge`
-
-### Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/AchievementForge)
-
-### Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/AchievementForge)
-
----
-
-## 🤝 Contributing
-
-Contributions are what make the open source community such an amazing place! We welcome all contributions, big or small.
-
-**Quick Contribution Guide:**
+## 🤝 Cara Berkontribusi (PR)
 
 ```bash
-# 1. Fork the repo and clone it
-git clone https://github.com/YOUR_USERNAME/AchievementForge.git
+# 1. Fork repo ini, lalu clone hasil fork kamu
+git clone https://github.com/USERNAME_KAMU/Try-git.git
+cd Try-git
 
-# 2. Create a feature branch
-git checkout -b feat/your-amazing-feature
+# 2. Buat branch baru
+git checkout -b feat/nama-fitur-kamu
 
-# 3. Make your changes
-# ... code, code, code ...
+# 3. Lakukan perubahan nyata di indeks.html / Pelajaran_manipulasi_dom_js.html
 
-# 4. Commit using Conventional Commits
-git commit -m "feat: add achievement progress export"
+# 4. Commit pakai Conventional Commits
+git commit -m "feat: tambah fitur X"
 
-# 5. Push to your fork
-git push origin feat/your-amazing-feature
-
-# 6. Open a Pull Request 🎉
+# 5. Push dan buka Pull Request
+git push origin feat/nama-fitur-kamu
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
-### 🎯 Ways to Contribute (and Earn Achievements!)
-
-| Contribution | Achievement Earned |
-|---|---|
-| Merge a PR into this repo | 🦈 Pull Shark |
-| Merge a PR without review | 🤠 YOLO |
-| Close an issue within 5 min | ⚡ Quickdraw |
-| Co-author a commit | 🧑‍💻 Pair Extraordinaire |
-| Answer a Discussion | 🌌 Galaxy Brain |
-| Star this repo | ⭐ Starstruck (for repo owner) |
-| React with ❤️ to anything | 💝 Heart On Your Sleeve |
+Lihat [CONTRIBUTING.md](CONTRIBUTING.md) untuk panduan lengkap.
 
 ---
 
-## 🗺️ Roadmap
+##  Deployment
 
-| Phase | Title | Status |
-|-------|-------|--------|
-| 01 | Foundation — Repo setup, docs, CI/CD | ✅ Completed |
-| 02 | Dashboard — UI, cards, dark mode, responsive | ✅ Completed |
-| 03 | Community — Discussions, contributor spotlight | 🔄 In Progress |
-| 04 | Analytics — GitHub API integration, live data | 📅 Planned |
-| 05 | Explorer — Strategy hub, leaderboard, quiz | 📅 Planned |
+### GitHub Pages
+1. Buka **Settings → Pages**
+2. Source: **Deploy from a branch** → `main` / `(root)`
+3. Situs otomatis live di `https://jouqio.github.io/Try-git/indeks.html`
 
----
-
-## 📝 Commit Convention
-
-This project follows [Conventional Commits](https://www.conventionalcommits.org/).
-
-```
-feat:     A new feature
-fix:      A bug fix
-docs:     Documentation changes
-style:    Formatting, CSS changes (no logic change)
-refactor: Code restructure (no feature/fix)
-test:     Adding or updating tests
-chore:    Build process, dependency updates
-perf:     Performance improvements
-ci:       CI/CD configuration changes
-```
-
-**Examples:**
-```bash
-git commit -m "feat: add achievement progress export to JSON"
-git commit -m "fix: correct counter animation on mobile Safari"
-git commit -m "docs: add Galaxy Brain strategy guide"
-git commit -m "style: improve card hover glow effect on dark mode"
-```
+Workflow otomatis di `.github/workflows/deploy.yml` sudah disediakan untuk deploy via GitHub Actions.
 
 ---
 
-## 📄 License
+##  Roadmap
 
-Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.
+| Fase | Judul | Status |
+|------|-------|--------|
+| 01 | Foundation — struktur repo & dokumentasi | ✅ Selesai |
+| 02 | Dashboard — UI, dark mode, responsive | ✅ Selesai |
+| 02.5 | GitHub Live Lookup — integrasi REST API | ✅ Selesai |
+| 03 | Community — Discussions, kontributor | 🔄 Berjalan |
+| 04 | Analytics — data live lanjutan | 📅 Rencana |
+| 05 | Explorer — strategy hub, quiz | 📅 Rencana |
 
 ---
 
-## ⭐ Star History
+##  Lisensi
 
-If this project helped you, please consider giving it a ⭐ — it helps others discover it and earns the **Starstruck** achievement for the maintainer!
+Didistribusikan di bawah **Lisensi MIT**. Lihat [LISENSI](LISENSI) untuk detail.
 
 ---
 
 <div align="center">
 
-Made with ❤️ for the open source community
+Dibuat untuk latihan Git & pengembangan web oleh **Jouqio**
 
-**[⬆ Back to Top](#️-achievementforge)**
+**[⬆ Kembali ke atas](#️-achievementforge)**
 
 </div>
