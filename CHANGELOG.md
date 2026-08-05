@@ -26,7 +26,7 @@ Format mengikuti [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Timeline dan roadmap 5 fase.
 - Dark/light mode dengan persistensi `localStorage`.
 
-## [0.1.0] — Foundation
+## [0.1.0] Foundation
 
 ### Added
 - Struktur repo awal, README, dan lisensi MIT.
