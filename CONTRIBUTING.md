@@ -39,11 +39,7 @@ Terima kasih sudah tertarik berkontribusi! Panduan ini menjelaskan cara berkontr
 
 ## Standar Kode
 
-<<<<<<< HEAD
-- Vanilla HTML/CSS/JS saja jangan tambahkan framework atau dependency baru tanpa diskusi terlebih dahulu di issue.
-=======
 - Vanilla HTML/CSS/JS saja — jangan tambahkan framework atau dependency baru tanpa diskusi terlebih dahulu di issue.
->>>>>>> 5a5559fc65a731b70d6a1f9eda8eb3eba2efd9ff
 - Gunakan custom property CSS yang sudah ada di `:root` (`--bg-0`, `--gold`, dst) daripada hardcode warna baru.
 - Pastikan perubahan tetap responsif di mobile (breakpoint 768px dan 480px sudah ada).
 
