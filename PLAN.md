@@ -1,6 +1,6 @@
 # AchievementForge — Rencana Pengembangan
 
-> Catatan: versi PLAN.md ini sudah direvisi. Bagian sebelumnya berisi strategi "farming" achievement pakai dua akun (PR tanpa review sungguhan, merge tanpa proses review, dsb) sengaja dihapus praktik itu berisiko dianggap manipulasi sistem GitHub dan bisa merugikan kredibilitas repo di mata recruiter atau kontributor lain. Fokus rencana ini sekarang murni pada pengembangan produk dan kontribusi yang genuine.
+> Catatan: versi PLAN.md ini sudah direvisi. Bagian sebelumnya berisi strategi "farming" achievement pakai dua akun (PR tanpa review sungguhan, merge tanpa proses review, dsb) sengaja dihapus — praktik itu berisiko dianggap manipulasi sistem GitHub dan bisa merugikan kredibilitas repo di mata recruiter atau kontributor lain. Fokus rencana ini sekarang murni pada pengembangan produk dan kontribusi yang genuine.
 
 ---
 
@@ -24,7 +24,7 @@ Try-git/
 
 ---
 
-##  Roadmap
+## 🗺️ Roadmap
 
 ### Fase 1 — Foundation ✅
 - Struktur repo, README, lisensi MIT, template issue/PR.
@@ -45,7 +45,7 @@ Try-git/
 - [ ] Export data achievement ke JSON
 - [ ] Kalkulasi persentase completion
 
-### Fase 5 — Explorer 📅
+### Fase 5 — Explorer 
 - [ ] Hub strategi achievement (artikel per achievement)
 - [ ] Quiz "achievement apa yang cocok untukmu"
 - [ ] Public REST API untuk data achievement
@@ -54,14 +54,9 @@ Try-git/
 
 ##  Prinsip Kontribusi
 
-<<<<<<< HEAD
-Setiap PR harus berisi perubahan **nyata** — perbaikan bug, fitur baru yang berguna, perbaikan dokumentasi, atau peningkatan aksesibilitas. Review dilakukan sungguh-sungguh sebelum merge. Ini menjaga riwayat commit tetap kredibel dan benar-benar mencerminkan kemampuan development.
-=======
 Setiap PR harus berisi perubahan **nyata** perbaikan bug, fitur baru yang berguna, perbaikan dokumentasi, atau peningkatan aksesibilitas. Review dilakukan sungguh-sungguh sebelum merge. Ini menjaga riwayat commit tetap kredibel dan benar-benar mencerminkan kemampuan development.
->>>>>>> 5a5559fc65a731b70d6a1f9eda8eb3eba2efd9ff
 
 ##  Konvensi Commit
-
 Proyek ini mengikuti [Conventional Commits](https://www.conventionalcommits.org/):
 
 ```
@@ -77,8 +72,4 @@ ci:       perubahan konfigurasi CI/CD
 
 ---
 
-<<<<<<< HEAD
-*AchievementForge — dibangun untuk belajar Git dan web development secara nyata.*
-=======
 *AchievementForge dibangun untuk belajar Git dan web development secara nyata.*
->>>>>>> 5a5559fc65a731b70d6a1f9eda8eb3eba2efd9ff
