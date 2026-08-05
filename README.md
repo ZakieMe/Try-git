@@ -10,9 +10,9 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 
-**Dashboard pelacak achievement GitHub — dibangun dengan HTML, CSS, dan JavaScript murni, lengkap dengan pencarian statistik profil GitHub secara live.**
+**Dashboard pelacak achievement GitHub dibangun dengan HTML, CSS, dan JavaScript murni, lengkap dengan pencarian statistik profil GitHub secara live.**
 
-[🔥 Live Demo](https://jouqio.github.io/Try-git/indeks.html) · [📘 Belajar DOM](Pelajaran_manipulasi_dom_js.html) · [🐛 Lapor Bug](../../issues/new)
+[ Live Demo](https://jouqio.github.io/Try-git/indeks.html) · [ Belajar DOM](Pelajaran_manipulasi_dom_js.html) · [ Lapor Bug](../../issues/new)
 
 </div>
 
@@ -41,15 +41,15 @@ Repo ini juga menjadi tempat latihan workflow Git & GitHub yang sesungguhnya: fo
 
 ##  Fitur
 
-- 🏆 **Achievement Showcase** — 11 achievement GitHub dengan strategi resmi untuk meraihnya
-- 🔍 **GitHub Live Lookup** — cari username GitHub apa pun dan tarik data publik langsung dari GitHub REST API (repo, followers, following, total star)
-- 🌙 **Dark / Light Mode** — transisi tema halus dengan persistensi `localStorage`
-- ✨ **Animasi Partikel Canvas** — animasi hero interaktif
-- 📱 **Fully Responsive** — mobile, tablet, dan desktop
-- ⚡ **Zero Dependencies** — tidak butuh build tool
-- 🔍 **Filter Achievement** — earned / in progress / available / legacy
-- 📅 **Timeline & Roadmap** — riwayat dan rencana pengembangan
-- 📘 **Modul Belajar DOM** — halaman interaktif belajar DOM manipulation, terintegrasi ke navigasi utama
+-  **Achievement Showcase** — 11 achievement GitHub dengan strategi resmi untuk meraihnya
+-  **GitHub Live Lookup** — cari username GitHub apa pun dan tarik data publik langsung dari GitHub REST API (repo, followers, following, total star)
+-  **Dark / Light Mode** — transisi tema halus dengan persistensi `localStorage`
+-  **Animasi Partikel Canvas** — animasi hero interaktif
+-  **Fully Responsive** — mobile, tablet, dan desktop
+-  **Zero Dependencies** — tidak butuh build tool
+-  **Filter Achievement** — earned / in progress / available / legacy
+-  **Timeline & Roadmap** — riwayat dan rencana pengembangan
+-  **Modul Belajar DOM** — halaman interaktif belajar DOM manipulation, terintegrasi ke navigasi utama
 
 ---
 
