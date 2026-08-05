@@ -54,7 +54,11 @@ Try-git/
 
 ##  Prinsip Kontribusi
 
+<<<<<<< HEAD
 Setiap PR harus berisi perubahan **nyata** — perbaikan bug, fitur baru yang berguna, perbaikan dokumentasi, atau peningkatan aksesibilitas. Review dilakukan sungguh-sungguh sebelum merge. Ini menjaga riwayat commit tetap kredibel dan benar-benar mencerminkan kemampuan development.
+=======
+Setiap PR harus berisi perubahan **nyata** perbaikan bug, fitur baru yang berguna, perbaikan dokumentasi, atau peningkatan aksesibilitas. Review dilakukan sungguh-sungguh sebelum merge. Ini menjaga riwayat commit tetap kredibel dan benar-benar mencerminkan kemampuan development.
+>>>>>>> 5a5559fc65a731b70d6a1f9eda8eb3eba2efd9ff
 
 ##  Konvensi Commit
 
@@ -73,4 +77,8 @@ ci:       perubahan konfigurasi CI/CD
 
 ---
 
+<<<<<<< HEAD
 *AchievementForge — dibangun untuk belajar Git dan web development secara nyata.*
+=======
+*AchievementForge dibangun untuk belajar Git dan web development secara nyata.*
+>>>>>>> 5a5559fc65a731b70d6a1f9eda8eb3eba2efd9ff
