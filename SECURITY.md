@@ -5,7 +5,7 @@
 Jika kamu menemukan kerentanan keamanan di proyek ini (misalnya XSS lewat input pada fitur GitHub Live Lookup, atau eksposur data sensitif), silakan laporkan melalui:
 
 - Buka [issue baru](../../issues/new) dengan label `security`, **tanpa** menyertakan detail eksploitasi secara publik jika kerentanannya kritis.
-- Atau hubungi maintainer langsung lewat profil GitHub [@Jouqio](https://github.com/Jouqio).
+- Atau hubungi maintainer langsung lewat profil GitHub [@Jouqio](https://github.com/Jouqio) dan [@ZakieMe](https://github.com/ZakieMe)
 
 ## Cakupan
 
