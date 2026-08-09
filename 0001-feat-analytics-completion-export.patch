@@ -1,0 +1,338 @@
+From 66e108a3fd4469aab4370139003eaa014fd76247 Mon Sep 17 00:00:00 2001
+From: Jouqio <jouqio@example.com>
+Date: Sun, 9 Aug 2026 19:32:46 +0000
+Subject: [PATCH] feat: tambah analytics panel kalkulasi completion % dan
+ export JSON
+
+- Hitung persentase completion achievement otomatis (earned=100%, in-progress=proporsional cur/max)
+- Tampilkan progress bar + breakdown jumlah per status (earned/in progress/available/legacy) di section Achievement
+- Tombol Export JSON untuk mengunduh seluruh data achievement + ringkasan completion sebagai achievementforge-data.json
+- Update README (fitur baru + status roadmap Fase 04) dan CHANGELOG
+- Checklist PLAN.md Fase 4: export data JSON & kalkulasi completion selesai
+---
+ CHANGELOG.md |   2 +
+ PLAN.md      |   6 +-
+ README.md    |   3 +-
+ index.html   | 221 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 228 insertions(+), 4 deletions(-)
+
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index bc3e1b0..d4a13fd 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -6,6 +6,8 @@ Format mengikuti [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+ ## [Unreleased]
+ 
+ ### Added
++- Fitur **Analytics Panel** di section Achievement (Fase 4): kalkulasi persentase completion achievement secara otomatis (earned dihitung penuh, in-progress dihitung proporsional dari `cur/max`), ditampilkan lewat progress bar + breakdown jumlah per status (earned/in progress/available/legacy).
++- Tombol **Export JSON**: mengunduh seluruh data achievement (status, deskripsi, strategi, progress, dan ringkasan persentase completion) sebagai file `achievementforge-data.json`, langsung dari browser tanpa backend.
+ - Fitur **GitHub Live Lookup**: pencarian statistik profil GitHub (repos, followers, following, total star) secara real-time lewat GitHub REST API.
+ - Navigasi burger menu untuk layar mobile.
+ - Halaman `Pelajaran_manipulasi_dom_js.html` kini terhubung penuh ke navigasi utama dan tombol CTA di `indeks.html`.
+diff --git a/PLAN.md b/PLAN.md
+index 7502afd..a90aaa4 100644
+--- a/PLAN.md
++++ b/PLAN.md
+@@ -40,10 +40,10 @@ Try-git/
+ - [ ] Tambah label `good first issue` untuk kontributor baru
+ - [ ] Contributor spotlight di README
+ 
+-### Fase 4 — Analytics 📅
++### Fase 4 — Analytics 🔄
+ - [ ] Contribution calendar widget (data dari GitHub API)
+-- [ ] Export data achievement ke JSON
+-- [ ] Kalkulasi persentase completion
++- [x] Export data achievement ke JSON
++- [x] Kalkulasi persentase completion
+ 
+ ### Fase 5 — Explorer 
+ - [ ] Hub strategi achievement (artikel per achievement)
+diff --git a/README.md b/README.md
+index bda81b4..381c43e 100644
+--- a/README.md
++++ b/README.md
+@@ -48,6 +48,7 @@ Repo ini juga menjadi tempat latihan workflow Git & GitHub yang sesungguhnya: fo
+ -  **Fully Responsive** — mobile, tablet, dan desktop
+ -  **Zero Dependencies** — tidak butuh build tool
+ -  **Filter Achievement** — earned / in progress / available / legacy
++-  **Analytics Panel** — kalkulasi persentase completion achievement secara otomatis (progress bar + breakdown per status), plus tombol export seluruh data achievement ke file JSON
+ -  **Timeline & Roadmap** — riwayat dan rencana pengembangan
+ -  **Modul Belajar DOM** — halaman interaktif belajar DOM manipulation, terintegrasi ke navigasi utama
+ 
+@@ -130,7 +131,7 @@ Workflow otomatis di `.github/workflows/deploy.yml` sudah disediakan untuk deplo
+ | 02 | Dashboard — UI, dark mode, responsive | ✅ Selesai |
+ | 02.5 | GitHub Live Lookup — integrasi REST API | ✅ Selesai |
+ | 03 | Community — Discussions, kontributor | 🔄 Berjalan |
+-| 04 | Analytics — data live lanjutan | 📅 Rencana |
++| 04 | Analytics — kalkulasi completion ✅, export JSON ✅, contribution calendar 📅 | 🔄 Berjalan |
+ | 05 | Explorer — strategy hub, quiz | 📅 Rencana |
+ 
+ ---
+diff --git a/index.html b/index.html
+index f61d305..3cea18a 100644
+--- a/index.html
++++ b/index.html
+@@ -725,6 +725,101 @@
+         border-color: var(--gold);
+         color: #000;
+       }
++
++      /* ================================================ ANALYTICS PANEL (Fase 4: kalkulasi completion + export data) ================================================ */
++      .analytics-panel {
++        background: var(--bg-2);
++        border: 1px solid var(--border-0);
++        border-radius: var(--r-lg);
++        padding: 1.5rem 1.75rem;
++        margin-bottom: 2rem;
++      }
++      .analytics-top {
++        display: flex;
++        align-items: center;
++        gap: 1.5rem;
++        flex-wrap: wrap;
++      }
++      .analytics-progress {
++        flex: 1;
++        min-width: 220px;
++      }
++      .analytics-progress-meta {
++        display: flex;
++        justify-content: space-between;
++        font-family: var(--font-mono);
++        font-size: 0.8rem;
++        color: var(--text-2);
++        margin-bottom: 0.5rem;
++      }
++      .analytics-progress-meta span:last-child {
++        color: var(--gold);
++        font-weight: 700;
++      }
++      .analytics-bar {
++        height: 10px;
++      }
++      .btn-export {
++        display: inline-flex;
++        align-items: center;
++        gap: 6px;
++        padding: 10px 18px;
++        background: transparent;
++        color: var(--text-1);
++        border: 1px solid var(--border-1);
++        border-radius: var(--r-md);
++        font-family: var(--font-mono);
++        font-size: 0.8rem;
++        font-weight: 600;
++        cursor: pointer;
++        transition: all var(--t-fast);
++        white-space: nowrap;
++      }
++      .btn-export:hover {
++        border-color: var(--gold);
++        color: var(--gold);
++      }
++      .btn-export:focus-visible {
++        outline: 2px solid var(--gold);
++        outline-offset: 2px;
++      }
++      .analytics-breakdown {
++        display: grid;
++        grid-template-columns: repeat(4, 1fr);
++        gap: 0.75rem;
++        margin-top: 1.25rem;
++        padding-top: 1.25rem;
++        border-top: 1px solid var(--border-0);
++      }
++      .analytics-stat {
++        text-align: center;
++      }
++      .analytics-stat-val {
++        font-family: var(--font-display);
++        font-size: 1.3rem;
++        font-weight: 700;
++        color: var(--text-0);
++      }
++      .analytics-stat-val.earned {
++        color: var(--green);
++      }
++      .analytics-stat-val.progress {
++        color: var(--purple);
++      }
++      .analytics-stat-val.available {
++        color: var(--gold);
++      }
++      .analytics-stat-val.legacy {
++        color: var(--text-3);
++      }
++      .analytics-stat-label {
++        font-size: 0.68rem;
++        color: var(--text-3);
++        font-family: var(--font-mono);
++        text-transform: uppercase;
++        letter-spacing: 0.05em;
++        margin-top: 0.2rem;
++      }
+       .achievements-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+@@ -1290,6 +1385,16 @@
+         .achievements-grid {
+           grid-template-columns: 1fr;
+         }
++        .analytics-top {
++          flex-direction: column;
++          align-items: stretch;
++        }
++        .btn-export {
++          justify-content: center;
++        }
++        .analytics-breakdown {
++          grid-template-columns: repeat(2, 1fr);
++        }
+         .footer-inner {
+           flex-direction: column;
+           text-align: center;
+@@ -1499,6 +1604,32 @@
+             GitHub.
+           </p>
+         </div>
++        <div class="analytics-panel reveal" id="analyticsPanel">
++          <div class="analytics-top">
++            <div class="analytics-progress">
++              <div class="analytics-progress-meta">
++                <span>Progress Keseluruhan</span>
++                <span id="analyticsPercentLabel">0%</span>
++              </div>
++              <div class="progress-bar analytics-bar">
++                <div
++                  class="progress-fill fill-gold"
++                  id="analyticsBarFill"
++                  style="width: 0%"
++                ></div>
++              </div>
++            </div>
++            <button
++              class="btn-export"
++              id="exportJsonBtn"
++              type="button"
++              aria-label="Unduh data achievement sebagai file JSON"
++            >
++              ⭳ Export JSON
++            </button>
++          </div>
++          <div class="analytics-breakdown" id="analyticsBreakdown"></div>
++        </div>
+         <div class="filter-tabs reveal">
+           <button class="filter-tab active" data-filter="all">Semua</button>
+           <button class="filter-tab" data-filter="earned">Earned</button>
+@@ -1937,6 +2068,94 @@
+         });
+       }
+ 
++      /* ================================================ ANALYTICS: KALKULASI COMPLETION + EXPORT JSON (Fase 4) ================================================ */
++      function calculateCompletionStats() {
++        const counts = { earned: 0, progress: 0, available: 0, legacy: 0 };
++        let earnedScore = 0;
++        ACHIEVEMENTS.forEach((a) => {
++          counts[a.status] = (counts[a.status] || 0) + 1;
++          if (a.status === "earned") {
++            earnedScore += 1;
++          } else if (a.status === "progress" && a.prog && a.prog.max) {
++            earnedScore += Math.min(1, a.prog.cur / a.prog.max);
++          }
++        });
++        const total = ACHIEVEMENTS.length;
++        const percent = total ? (earnedScore / total) * 100 : 0;
++        return { counts, total, percent };
++      }
++
++      function renderAnalyticsPanel() {
++        const fill = document.getElementById("analyticsBarFill");
++        const label = document.getElementById("analyticsPercentLabel");
++        const breakdown = document.getElementById("analyticsBreakdown");
++        if (!fill || !label || !breakdown) return;
++
++        const { counts, percent } = calculateCompletionStats();
++        fill.style.width = `${percent.toFixed(1)}%`;
++        label.textContent = `${percent.toFixed(1)}%`;
++        fill.parentElement.setAttribute("role", "progressbar");
++        fill.parentElement.setAttribute("aria-valuemin", "0");
++        fill.parentElement.setAttribute("aria-valuemax", "100");
++        fill.parentElement.setAttribute(
++          "aria-valuenow",
++          percent.toFixed(1),
++        );
++
++        const items = [
++          { key: "earned", label: "Earned" },
++          { key: "progress", label: "In Progress" },
++          { key: "available", label: "Available" },
++          { key: "legacy", label: "Legacy" },
++        ];
++        breakdown.innerHTML = items
++          .map(
++            (i) => `
++        <div class="analytics-stat">
++          <div class="analytics-stat-val ${i.key}">${counts[i.key] || 0}</div>
++          <div class="analytics-stat-label">${i.label}</div>
++        </div>`,
++          )
++          .join("");
++      }
++
++      function exportAchievementsJSON() {
++        const { counts, total, percent } = calculateCompletionStats();
++        const payload = {
++          generatedAt: new Date().toISOString(),
++          source: "AchievementForge",
++          totalAchievements: total,
++          completionPercent: Number(percent.toFixed(1)),
++          breakdown: counts,
++          achievements: ACHIEVEMENTS.map((a) => ({
++            name: a.name,
++            status: a.status,
++            description: a.desc,
++            strategy: a.strategy,
++            progress: a.prog
++              ? { current: a.prog.cur, target: a.prog.max }
++              : null,
++          })),
++        };
++        const blob = new Blob([JSON.stringify(payload, null, 2)], {
++          type: "application/json",
++        });
++        const url = URL.createObjectURL(blob);
++        const link = document.createElement("a");
++        link.href = url;
++        link.download = "achievementforge-data.json";
++        document.body.appendChild(link);
++        link.click();
++        link.remove();
++        URL.revokeObjectURL(url);
++      }
++
++      function initAnalyticsExport() {
++        const btn = document.getElementById("exportJsonBtn");
++        if (!btn) return;
++        btn.addEventListener("click", exportAchievementsJSON);
++      }
++
+       /* ================================================ COUNTER ANIMATION ================================================ */
+       function animateCounter(el) {
+         const target = parseInt(el.dataset.target, 10);
+@@ -2095,11 +2314,13 @@
+         renderAchievements();
+         renderTimeline();
+         renderRoadmap();
++        renderAnalyticsPanel();
+         initFilters();
+         initReveal();
+         initHeroCounters();
+         initBurger();
+         initGithubLookup();
++        initAnalyticsExport();
+       });
+     </script>
+   </body>
+-- 
+2.43.0
+
